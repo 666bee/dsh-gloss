@@ -1,0 +1,8 @@
+node_modules/
+state.json
+npm-debug.log*
+*.log
+shot-*.png
+crop-*.png
+.DS_Store
+Thumbs.db

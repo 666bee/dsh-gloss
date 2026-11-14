@@ -1,0 +1,56 @@
+{
+  "name": "dsh-gloss",
+  "version": "1.0.0",
+  "description": "DSH Gloss：给 DeepSeek Harness 补上六处界面细节——发送后撤回、顶栏进度条、Alt+Enter 换行、联网开关、侧栏圆点提醒",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "ui",
+    "desktop"
+  ],
+  "author": "newbe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/666bee/dsh-gloss.git"
+  },
+  "homepage": "https://github.com/666bee/dsh-gloss#readme",
+  "bugs": {
+    "url": "https://github.com/666bee/dsh-gloss/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CHANGELOG.pre-1.0.md",
+    "docs/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
